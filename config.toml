@@ -1,13 +1,21 @@
 # Site settings
-baseurl = "/"
+baseurl = "https://Steen24.github.io/"
+
 languageCode = "en-us"
-title = "Okkur - Syna"
+title = "Steen - Syna"
 theme = "syna"
+method = "html"
 enableGitInfo = true
 version = "0.16.2"
 
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+
 # Google Analytics tracking
 googleAnalytics = ""
+
+[permalinks]
+    post = "/:year/:month/:day/:title/"
 
 [outputs]
   home = ["HTML", "JSON"]
@@ -23,10 +31,11 @@ lastmod = ["lastmod", ":git", "date"]
 
 [params]
   name = "Okkur Labs"
-  description = "Open Source Theme for your next project"
+  GithubEdit = "https://github.com/rbind/yihui/edit/master/content/"
 
   [params.style]
-    #background = "secondary"
+    background = "secondary"
+
 
   # Theme customizations
   # Assets relative to 'static/'
@@ -70,47 +79,52 @@ lastmod = ["lastmod", ":git", "date"]
 
 [[menu.main]]
   url = "/about"
-  name = "About Us"
+  name = "About Steen"
   weight = 20
+
+[[menu.main]]
+  url = "post/2020-04-14-post.rmd"
+  name = "Post" 
+  weight = 20
+
 
 [[menu.main]]
   url = "#contact"
   name = "Contact"
   weight = 30
 
-[[menu.footer]]
-  url = "#"
-  name = "Link"
-  weight = 10
+#[params]
+#    description = "A website built through Hugo and blogdown."
+#    GithubEdit = "https://github.com/yihui/hugo-xmin/edit/feature/github-edit/exampleSite/content/"
+#    footer = "&copy; [Steen24](https://github.com/yihui) 2017 -- 2019 | [Twitter](https://twitter.com/xieyihui)"
+#    GithubEdit =  "https://github.com/Steen24/hugo-xmin/master/exampleSite/content/"
 
-[[menu.footer]]
+[[menu.footer]] 
   url = "#"
-  name = "Long Link"
+  name = "Long Link" 
   weight = 30
 
-[[menu.footer]]
-  url = "#"
-  name = "Tiny Link"
-  weight = 30
+
+#[[menu.copyright_footer]]
+ # url = "/about"
+#  name = "About Us"
+#  weight = 10
 
 [[menu.copyright_footer]]
-  url = "/about"
-  name = "About Us"
-  weight = 10
-
-[[menu.copyright_footer]]
-  url = "#"
-  name = "Another Link"
-  weight = 30
+url = "static/post/2020-04-14-post.rmd"
+name = "post Link"
+weight = 30
 
 [[menu.footer_social]]
   weight = 20
   name = "facebook"
   pre = "fab fa-facebook-f"
-  url = "#"
+  url = "post/2020-04-14-post.rmd"
 
 [[menu.footer_social]]
   weight = 30
   name = "linkedin"
   pre = "fab fa-linkedin-in"
-  url = "#"
+  url = "https://www.linkedin.com/in/steen-wettstein-7a673490/"
+  
+  
